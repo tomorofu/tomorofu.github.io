@@ -21,15 +21,32 @@
             max-width: 80%;
             max-height: 80%;
         }
+        .grid {
+            display: flex;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+        .grid span {
+            border-right: 1px solid #333;
+            height: 100%;
+            width: 25%;
+        }
     </style>
 </head>
 
 
 <body>
+    <div class="grid">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <h1>ARマーカー表示</h1>
     <br><br>
     <p>このQRコードを読み込んで表示されるポップアップをすべて許可すると、KuMAのロゴを3Dにしたモデルがマーカー上に表示されます。</p> 
     <br><br>
-    <img src="assets/marker.png" alt="ARマーカー">
+    <img src="marker.png" alt="ARマーカー">
 </body>
 </html>
