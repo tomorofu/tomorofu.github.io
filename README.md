@@ -16,4 +16,4 @@ Webブラウザで動作するARマーカー表示ページです。KuMAのア�
 
 ## その他の情報
 
-ない
+[メタバースコンペティション](https://tomorofu.github.io/memo/metaverse-competition.md)
