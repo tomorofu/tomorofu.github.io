@@ -1,5 +1,10 @@
 ﻿---
 title: "メタバースコンペティション"
+
+header:
+  image: /assets/images/unsplash-image-1.jpg
+  caption: "Photo credit: [**Unsplash**](/assets/images/tokyo-u/akamon.jpg)"
+
 last_modified_at: 2024-12-11T16:20:02-05:00
 categories:
   - Blog
