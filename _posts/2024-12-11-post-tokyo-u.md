@@ -27,15 +27,24 @@ tags:
 
 4限に出席した後、子飼橋の交差点にできたドーナツ屋さんに行き、通町筋のバス停から阿蘇くまもと空港に向かいました。
 
-![食べかけですみません](/assets/images/tokyo-u/donuts.jpg)
+<figure style="width: 400px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tokyo-u/donuts.jpg" alt="食べかけのドーナツ">
+  <figcaption>食べかけですみません</figcaption>
+</figure>
 
 空港でキャリーケースの鍵を忘れたことに気づき、急いでピッキングする方法を調べましたが、他の人の鍵で開けられたので必要ありませんでした。
 
-![空港のくまモン](/assets/images/tokyo-u/kumamon.png)
+<figure style="width: 400px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tokyo-u/kumamon.png" alt="空港のくまモン">
+  <figcaption>空港のくまモン</figcaption>
+</figure>
 
 飛行機が遅れたせいで、宿泊先への到着は0時過ぎになってしまいました。明日の朝も早いのに。Airbnbで借りた部屋は写真で見るよりも狭く、3人で過ごすには少し窮屈でしたが、寝るだけなので十分です。
 
-![１人はソファーです](/assets/images/tokyo-u/room.jpeg)
+<figure style="width: 400px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tokyo-u/room.jpeg" alt="狭い部屋">
+  <figcaption>１人はソファーです</figcaption>
+</figure>
 
 ---
 
@@ -43,17 +52,26 @@ tags:
 
 朝マックでグリドルを食べ、9時に東大に着きました。
 
-![ベーコンエッグ](/assets/images/tokyo-u/guridoru.jpg)
+<figure style="width: 400px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tokyo-u/guridoru.jpg" alt="ベーコンエッグ">
+  <figcaption>ベーコンエッグ</figcaption>
+</figure>
 
 正門をくぐると、そこには黄色の世界が広がっていました。つまり、銀杏の葉が地面を覆っていて綺麗でした。
 
-![時期がちょうどよかったです](/assets/images/tokyo-u/yellow.jpeg)
+<figure style="width: 400px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tokyo-u/yellow.jpeg" alt="銀杏の葉">
+  <figcaption>時期がちょうどよかったです</figcaption>
+</figure>
 
 この日は企業の方に向けた展示が2時間半あり、その後に懇談会という流れでした。ハタ揚げ展示4回目のプロが作品紹介をしてくれたので、円滑に体験してもらうことができました。また、作品に対する意見や感想は今後の制作の参考になりました。
 
 解散した後に時間があったので、秋葉原でケバブを食べました。美味しい上に量も多かったので満足しました。
 
-![ラップ・チキン・ヨーグルトソース](/assets/images/tokyo-u/kebabu.jpg)
+<figure style="width: 400px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tokyo-u/kebabu.jpg" alt="ケバブ">
+  <figcaption>ラップ・チキン・ヨーグルトソース</figcaption>
+</figure>
 
 ---
 
@@ -63,13 +81,19 @@ tags:
 
 午前中の2時間で開かれた一般向け展示の来場者は3組程でした。他の参加者の制作物も体験してみたかったのですが、タイミングが合わず叶いませんでした。
 
-![展示場所の様子](/assets/images/tokyo-u/ready.jpg)
+<figure style="width: 400px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tokyo-u/ready.jpg" alt="展示場所の様子">
+  <figcaption>展示場所の様子</figcaption>
+</figure>
 
 撤収後に3人で揉めたので、帰りの飛行機までの時間は頭を冷やすために一旦解散しました。
 
 私は疲れたので早めに空港に向かいました。待っていると、2人ともそれぞれ遅れそうという連絡があり、やがてダッシュで搭乗口にやって来ました。飛行機が遅れたおかげでなんとか間に合い、キャリーケースを1つ犠牲にして、みんなで飛行機に乗ることができたのでよかったです。飛行機遅れてくれてありがとう。
 
-![銀杏の葉の形をしたガードレール](/assets/images/tokyo-u/guard.jpg)
+<figure style="width: 400px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/tokyo-u/guard.jpg" alt="銀杏の葉の形をしたガードレール">
+  <figcaption>銀杏の葉の形をしたガードレール</figcaption>
+</figure>
 
 ---
 
