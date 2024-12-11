@@ -5,7 +5,10 @@ header:
   image: /assets/images/tokyo-u/akamon.jpg
   caption: "東大の赤門"
 
-last_modified_at: 2024-12-11T16:20:02-05:00
+last_modified_at: 2024-12-11
+
+share: false
+
 categories:
   - Blog
 tags:
@@ -17,14 +20,6 @@ toc_sticky: true
 
 2024年12月6日〜8日に東京大学で開催された「メタバースラウンジ」のメタバースコンペティションに参加するため、2泊3日で東京に行った体験を報告します。
 
-## 目次
-
-- [1日目](#1日目)
-- [2日目](#2日目)
-- [3日目](#3日目)
-- [まとめ](#まとめ)
-
----
 
 ## 1日目
 
