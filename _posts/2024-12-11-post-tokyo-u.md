@@ -5,8 +5,6 @@ header:
   image: /assets/images/tokyo-u/akamon.jpg
   caption: "東大の赤門"
 
-last_modified_at: 2024-12-11
-
 share: false
 
 categories:
