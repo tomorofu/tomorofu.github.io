@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "tomorofu"
-  avatar : assets/images/icon.jpg"
+  avatar : "assets\images\icon.jpg"
   bio    : "軽い気持ちで書いています"
   links:
     - label: "Website"
