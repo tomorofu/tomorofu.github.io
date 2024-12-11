@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+﻿# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "tomorofu"
   avatar : "icon.jpg"
-  bio    : ""
+  bio    : "軽い気持ちで書いています"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
