@@ -74,9 +74,9 @@ author:
 #    - label: "Instagram"
 #      icon: "fab fa-fw fa-instagram"
 #      url: "https://instagram.com/"
-     - label: "Demos"
-       icon: "fab fa-brands fa-unity"
-       url: "/Demos"
+#    - label: "Demos"
+#      icon: "fab fa-brands fa-unity"
+#      url: "/Demos"
 
 footer:
   links:
