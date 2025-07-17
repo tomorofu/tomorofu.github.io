@@ -68,15 +68,15 @@ author:
 #    - label: "Twitter"
 #      icon: "fab fa-fw fa-twitter-square"
 #      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/tomorofu/tomorofu.github.io/tree/main"
+     - label: "GitHub"
+       icon: "fab fa-fw fa-github"
+       url: "https://github.com/tomorofu/tomorofu.github.io/tree/main"
 #    - label: "Instagram"
 #      icon: "fab fa-fw fa-instagram"
 #      url: "https://instagram.com/"
-    - label: "Demos"
-      icon: "fab fa-brands fa-unity"
-      url: "/Demos"
+     - label: "Demos"
+       icon: "fab fa-brands fa-unity"
+       url: "/Demos"
 
 footer:
   links:
