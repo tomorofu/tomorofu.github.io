@@ -3,8 +3,8 @@ title: 2Dゲームプレイ
 layout: single
 author_profile: true
 excerpt: Unityで作成した2DゲームのWebGLデモです．
-permalink: /demos/2d-game/
-external_url: https://tomorofu.github.io/demos/2Dgame
+permalink: /demos/2Dgame/
+external_url: https://tomorofu.github.io/Demos/2Dgame
 ---
 
 [▶ デモページを見る]({{ page.external_url }})
