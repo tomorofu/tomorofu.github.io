@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 excerpt: Webブラウザで動作するARマーカー表示ページです．KuMAのアイコンが3Dになって飛び出します．
 permalink: /demos/ar/
-external_url: https://tomorofu.github.io/Demos/ar
+external_url: https://tomorofu.github.io/Demos/ar/marker.html
 ---
 
 [▶ デモページを見る]({{ page.external_url }})
