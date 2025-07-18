@@ -10,7 +10,7 @@ author_profile: true
   {% for demo in site.demos %}
   <li class="project-item" style="margin-bottom: 20px;">
     <h3>
-      <a href="{{ demo.external_url | default: demo.url }}">{{ forloop.index }}. {{ demo.title }}</a>
+      <a href="{{ demo.external_url | default: demo.url }}">{{ demo.title }}</a>
     </h3>
     <p>{{ demo.excerpt }}</p>
   </li>
