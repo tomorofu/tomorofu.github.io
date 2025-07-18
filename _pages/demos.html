@@ -10,11 +10,10 @@ author_profile: true
   <h1>Demos</h1>
 </div>
 
-## プロジェクト一覧
-
-<ul class="project-list">
+<h2>プロジェクト一覧</h2>
+<ul class="project-list" style="list-style: none; padding: 0;">
   {% for demo in site.demos %}
-  <li class="project-item" style="margin-bottom: 15px;">
+  <li class="project-item" style="margin-bottom: 20px;">
     <h3>
       <a href="{{ demo.external_url | default: demo.url }}">{{ forloop.index }}. {{ demo.title }}</a>
     </h3>
@@ -23,8 +22,7 @@ author_profile: true
   {% endfor %}
 </ul>
 
----
+<hr>
 
-## その他の情報
-
+<h2>その他の情報</h2>
 <p>ないです</p>
