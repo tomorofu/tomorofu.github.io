@@ -111,9 +111,12 @@ defaults:
       author_profile: true
 
 collections:
-  demos:
-    output: true
-    permalink: /demos/:path/
+  # _demos
+  - demos:
+      output: true
+      permalink: /demos/:path/
+    values:
+      show_navigation: false
 
 #category_archive:
 #  type: liquid
