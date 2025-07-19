@@ -13,5 +13,5 @@ KuMAのロゴを3Dにしたモデルがマーカー上に表示されます.
 
 
 <figure style="width: 50%; margin: auto;" class="align-center">
-  <img src="assets/marker.png" alt="ARマーカー">
+  <img src="{{ site.url }}{{ site.baseurl }}/demos/ar//assets/marker.png" alt="ARマーカー">
 </figure>
