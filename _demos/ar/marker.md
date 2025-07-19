@@ -7,7 +7,8 @@ permalink: /demos/ar/marker/
 external_url: https://tomorofu.github.io/demos/ar/marker
 ---
 
-このQRコードを読み込んで表示されるポップアップをすべて許可すると、KuMAのロゴを3Dにしたモデルがマーカー上に表示されます。
+このQRコードを読み込んで表示されるポップアップをすべて許可すると,
+KuMAのロゴを3Dにしたモデルがマーカー上に表示されます.
 
 
 <figure style="width: 50%; margin: auto;" class="align-center">
