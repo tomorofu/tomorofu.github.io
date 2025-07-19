@@ -12,6 +12,5 @@ KuMAのロゴを3Dにしたモデルがマーカー上に表示されます.
 
 
 <figure style="width: 50%; margin: auto;" class="align-center">
-  <img src="./demos/ar/assets/marker.png" alt="ARマーカー">
-  <figcaption>空港のくまモン</figcaption>
+  <img src="assets/marker.png" alt="ARマーカー">
 </figure>
