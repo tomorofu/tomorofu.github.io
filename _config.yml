@@ -111,6 +111,7 @@ defaults:
       author_profile: true
 
 collections:
+  #_demos
   demos:
     output: true
     permalink: /demos/:path/
