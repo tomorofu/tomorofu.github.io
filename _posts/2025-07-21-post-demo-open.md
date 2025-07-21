@@ -3,7 +3,6 @@ title: "デモページ完成"
 
 header:
   image: /assets/images/demo-open/demokansei.png
-  # caption: "東大の赤門"
 
 share: false
 
