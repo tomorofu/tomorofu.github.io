@@ -78,8 +78,8 @@ author:
 #      icon: "fab fa-brands fa-unity"
 #      url: "/Demos"
 
-footer:
-  links:
+footer: false
+#  links:
 #    - label: "Twitter"
 #      icon: "fab fa-fw fa-twitter-square"
 #      url: "https://twitter.com/"
