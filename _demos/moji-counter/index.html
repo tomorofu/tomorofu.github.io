@@ -7,93 +7,132 @@ permalink: /demos/moji-counter/
 
 <style>
 .counter-container {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0 0 1.5em 0;
 }
 
 .counter-lead {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
+  font-size: 1em;
+  line-height: 1.7;
 }
 
 .counter-card {
-  background: #111827;
-  border: 1px solid #334155;
-  border-radius: 20px;
-  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 0.25rem;
+  padding: 1.25em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .counter-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  margin: 24px 0;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
 }
 
 .counter-stat {
-  background: #1f2937;
-  border: 1px solid #334155;
-  border-radius: 16px;
-  padding: 16px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 0.25rem;
+  padding: 0.9rem 1rem;
 }
 
 .counter-label {
-  font-size: 13px;
-  color: #94a3b8;
-  margin-bottom: 8px;
+  font-size: 0.8em;
+  color: #6c757d;
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
 }
 
 .counter-value {
-  font-size: 30px;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2c3e50;
 }
 
 .counter-textarea {
+  display: block;
   width: 100%;
   min-height: 320px;
   resize: vertical;
-  border: 1px solid #334155;
-  border-radius: 16px;
-  padding: 18px;
-  font-size: 16px;
+  padding: 0.75em 1em;
+  font-size: 1em;
   line-height: 1.8;
-  background: #0f172a;
-  color: #e5e7eb;
-  outline: none;
+  color: #494e52;
+  background: #ffffff;
+  border: 1px solid #b0b8c1;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
 }
 
 .counter-textarea:focus {
-  border-color: #38bdf8;
-  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+  outline: none;
+  border-color: #7a8288;
+  box-shadow: 0 0 0 0.12rem rgba(122, 130, 136, 0.15);
 }
 
 .counter-actions {
   display: flex;
-  gap: 12px;
-  margin-top: 16px;
+  gap: 0.75rem;
+  margin-top: 1rem;
   flex-wrap: wrap;
 }
 
 .counter-btn {
-  border: none;
-  background: #38bdf8;
-  color: #082f49;
-  font-weight: 700;
-  padding: 12px 18px;
-  border-radius: 999px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: #7a8288;
+  border: 1px solid #7a8288;
+  border-radius: 0.25rem;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.counter-btn:hover {
+  background: #646c72;
+  border-color: #646c72;
 }
 
 .counter-btn-secondary {
-  background: transparent;
-  color: #e5e7eb;
-  border: 1px solid #334155;
+  color: #494e52;
+  background: #ffffff;
+  border: 1px solid #b0b8c1;
+}
+
+.counter-btn-secondary:hover {
+  background: #f3f4f5;
+  border-color: #7a8288;
+  color: #2c3e50;
 }
 
 .counter-note {
-  margin-top: 14px;
-  font-size: 14px;
-  color: #94a3b8;
+  margin-top: 0.85rem;
+  font-size: 0.85em;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .counter-card {
+    padding: 1rem;
+  }
+
+  .counter-value {
+    font-size: 1.5rem;
+  }
+
+  .counter-textarea {
+    min-height: 240px;
+  }
 }
 </style>
 
@@ -103,6 +142,9 @@ permalink: /demos/moji-counter/
   </p>
 
   <div class="counter-card">
+
+    <textarea id="textInput" class="counter-textarea" placeholder="ここに文章を入力して"></textarea>
+
     <div class="counter-stats">
       <div class="counter-stat">
         <div class="counter-label">文字数</div>
@@ -124,8 +166,6 @@ permalink: /demos/moji-counter/
         <div id="byteCount" class="counter-value">0</div>
       </div>
     </div>
-
-    <textarea id="textInput" class="counter-textarea" placeholder="ここに文章を入力してください"></textarea>
 
     <div class="counter-actions">
       <button id="copyButton" class="counter-btn" type="button">入力内容をコピー</button>
