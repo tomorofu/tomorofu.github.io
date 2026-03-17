@@ -1,192 +1,184 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>文字数カウンター</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #0f172a;
-      --panel: #111827;
-      --panel-2: #1f2937;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --border: #334155;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: linear-gradient(180deg, #020617 0%, #0f172a 100%);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      display: flex;
-      justify-content: center;
-      padding: 32px 16px;
-    }
-    .container { width: min(900px, 100%); }
-    .card {
-      background: rgba(17, 24, 39, 0.92);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(8px);
-    }
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(28px, 4vw, 40px);
-    }
-    p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 12px;
-      margin: 24px 0;
-    }
-    .stat {
-      background: var(--panel-2);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-    }
-    .label {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    .value {
-      font-size: 30px;
-      font-weight: 700;
-      color: white;
-    }
-    textarea {
-      width: 100%;
-      min-height: 320px;
-      resize: vertical;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-      font-size: 16px;
-      line-height: 1.8;
-      background: #020617;
-      color: var(--text);
-      outline: none;
-    }
-    textarea:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
-    }
-    .actions {
-      display: flex;
-      gap: 12px;
-      margin-top: 16px;
-      flex-wrap: wrap;
-    }
-    button {
-      border: none;
-      background: var(--accent);
-      color: #082f49;
-      font-weight: 700;
-      padding: 12px 18px;
-      border-radius: 999px;
-      cursor: pointer;
-    }
-    button.secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-    .note {
-      margin-top: 14px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-  </style>
-</head>
-<body>
-  <main class="container">
-    <section class="card">
-      <h1>文字数カウンター</h1>
-      <p>入力した文章の文字数をリアルタイムでカウントします．改行や空白を含む件数と，除いた件数の両方を表示します．</p>
+---
+title: 文字数カウンター
+layout: single
+author_profile: true
+permalink: /demos/moji-counter/
+---
 
-      <div class="stats">
-        <div class="stat">
-          <div class="label">文字数</div>
-          <div id="charCount" class="value">0</div>
-        </div>
-        <div class="stat">
-          <div class="label">空白と改行を除く文字数</div>
-          <div id="trimmedCharCount" class="value">0</div>
-        </div>
-        <div class="stat">
-          <div class="label">行数</div>
-          <div id="lineCount" class="value">0</div>
-        </div>
-        <div class="stat">
-          <div class="label">UTF-8バイト数</div>
-          <div id="byteCount" class="value">0</div>
-        </div>
+<style>
+.counter-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.counter-lead {
+  margin-bottom: 1rem;
+}
+
+.counter-card {
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.counter-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.counter-stat {
+  background: #1f2937;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.counter-label {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.counter-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.counter-textarea {
+  width: 100%;
+  min-height: 320px;
+  resize: vertical;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 18px;
+  font-size: 16px;
+  line-height: 1.8;
+  background: #0f172a;
+  color: #e5e7eb;
+  outline: none;
+}
+
+.counter-textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+.counter-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.counter-btn {
+  border: none;
+  background: #38bdf8;
+  color: #082f49;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.counter-btn-secondary {
+  background: transparent;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+}
+
+.counter-note {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+</style>
+
+<div class="counter-container">
+  <p class="counter-lead">
+    入力した文章の文字数をリアルタイムでカウントします．改行や空白を含む件数と，除いた件数の両方を表示します．
+  </p>
+
+  <div class="counter-card">
+    <div class="counter-stats">
+      <div class="counter-stat">
+        <div class="counter-label">文字数</div>
+        <div id="charCount" class="counter-value">0</div>
       </div>
 
-      <textarea id="textInput" placeholder="ここに文章を入力してください"></textarea>
-
-      <div class="actions">
-        <button id="copyButton">入力内容をコピー</button>
-        <button id="clearButton" class="secondary">クリア</button>
+      <div class="counter-stat">
+        <div class="counter-label">空白と改行を除く文字数</div>
+        <div id="trimmedCharCount" class="counter-value">0</div>
       </div>
 
-      <div class="note">GitHub Pagesにそのまま置けるシンプルな静的HTMLです．</div>
-    </section>
-  </main>
+      <div class="counter-stat">
+        <div class="counter-label">行数</div>
+        <div id="lineCount" class="counter-value">0</div>
+      </div>
 
-  <script>
-    const textInput = document.getElementById('textInput');
-    const charCount = document.getElementById('charCount');
-    const trimmedCharCount = document.getElementById('trimmedCharCount');
-    const lineCount = document.getElementById('lineCount');
-    const byteCount = document.getElementById('byteCount');
-    const clearButton = document.getElementById('clearButton');
-    const copyButton = document.getElementById('copyButton');
+      <div class="counter-stat">
+        <div class="counter-label">UTF-8バイト数</div>
+        <div id="byteCount" class="counter-value">0</div>
+      </div>
+    </div>
 
-    function updateCounts() {
-      const text = textInput.value;
-      charCount.textContent = text.length.toLocaleString('ja-JP');
-      trimmedCharCount.textContent = text.replace(/[\s\u3000]/g, '').length.toLocaleString('ja-JP');
-      lineCount.textContent = (text.length === 0 ? 0 : text.split(/\r\n|\r|\n/).length).toLocaleString('ja-JP');
-      byteCount.textContent = new TextEncoder().encode(text).length.toLocaleString('ja-JP');
-    }
+    <textarea id="textInput" class="counter-textarea" placeholder="ここに文章を入力してください"></textarea>
 
-    textInput.addEventListener('input', updateCounts);
+    <div class="counter-actions">
+      <button id="copyButton" class="counter-btn" type="button">入力内容をコピー</button>
+      <button id="clearButton" class="counter-btn counter-btn-secondary" type="button">クリア</button>
+    </div>
 
-    clearButton.addEventListener('click', () => {
-      textInput.value = '';
-      updateCounts();
-      textInput.focus();
-    });
+    <div class="counter-note">
+      GitHub Pages 上でそのまま使えるシンプルな文字数カウンターです．
+    </div>
+  </div>
+</div>
 
-    copyButton.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(textInput.value);
-        copyButton.textContent = 'コピーしました';
-        setTimeout(() => {
-          copyButton.textContent = '入力内容をコピー';
-        }, 1200);
-      } catch {
-        copyButton.textContent = 'コピー失敗';
-        setTimeout(() => {
-          copyButton.textContent = '入力内容をコピー';
-        }, 1200);
-      }
-    });
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const textInput = document.getElementById('textInput');
+  const charCount = document.getElementById('charCount');
+  const trimmedCharCount = document.getElementById('trimmedCharCount');
+  const lineCount = document.getElementById('lineCount');
+  const byteCount = document.getElementById('byteCount');
+  const clearButton = document.getElementById('clearButton');
+  const copyButton = document.getElementById('copyButton');
 
+  function updateCounts() {
+    const text = textInput.value;
+    charCount.textContent = text.length.toLocaleString('ja-JP');
+    trimmedCharCount.textContent = text.replace(/[\s\u3000]/g, '').length.toLocaleString('ja-JP');
+    lineCount.textContent = (text.length === 0 ? 0 : text.split(/\r\n|\r|\n/).length).toLocaleString('ja-JP');
+    byteCount.textContent = new TextEncoder().encode(text).length.toLocaleString('ja-JP');
+  }
+
+  textInput.addEventListener('input', updateCounts);
+
+  clearButton.addEventListener('click', function () {
+    textInput.value = '';
     updateCounts();
-  </script>
-</body>
-</html>
+    textInput.focus();
+  });
+
+  copyButton.addEventListener('click', async function () {
+    try {
+      await navigator.clipboard.writeText(textInput.value);
+      copyButton.textContent = 'コピーしました';
+      setTimeout(function () {
+        copyButton.textContent = '入力内容をコピー';
+      }, 1200);
+    } catch (e) {
+      copyButton.textContent = 'コピー失敗';
+      setTimeout(function () {
+        copyButton.textContent = '入力内容をコピー';
+      }, 1200);
+    }
+  });
+
+  updateCounts();
+});
+</script>
