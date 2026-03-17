@@ -17,14 +17,6 @@ permalink: /demos/moji-counter/
   line-height: 1.7;
 }
 
-.counter-card {
-  background: #ffffff;
-  border: 1px solid #e9ecef;
-  border-radius: 0.25rem;
-  padding: 1.25em;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-}
-
 .counter-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -36,18 +28,18 @@ permalink: /demos/moji-counter/
   background: #f8f9fa;
   border: 1px solid #e9ecef;
   border-radius: 0.25rem;
-  padding: 0.9rem 1rem;
+  padding: 0.75rem 0.9rem;
 }
 
 .counter-label {
   font-size: 0.8em;
   color: #6c757d;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
   line-height: 1.4;
 }
 
 .counter-value {
-  font-size: 1.8rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.2;
   color: #2c3e50;
@@ -114,20 +106,9 @@ permalink: /demos/moji-counter/
   color: #2c3e50;
 }
 
-.counter-note {
-  margin-top: 0.85rem;
-  font-size: 0.85em;
-  color: #6c757d;
-  line-height: 1.6;
-}
-
 @media (max-width: 640px) {
-  .counter-card {
-    padding: 1rem;
-  }
-
   .counter-value {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   .counter-textarea {
@@ -138,39 +119,31 @@ permalink: /demos/moji-counter/
 
 <div class="counter-container">
   <p class="counter-lead">
-    入力した文章の文字数をリアルタイムでカウントしまうす．
+    入力した文章の文字数をリアルタイムでカウントします．
   </p>
 
-  <div class="counter-card">
+  <textarea id="textInput" class="counter-textarea" placeholder="ここに文章を入力して"></textarea>
 
-    <textarea id="textInput" class="counter-textarea" placeholder="ここに文章を入力して"></textarea>
-
-    <div class="counter-stats">
-      <div class="counter-stat">
-        <div class="counter-label">文字数</div>
-        <div id="charCount" class="counter-value">0</div>
-      </div>
-
-      <div class="counter-stat">
-        <div class="counter-label">空白と改行を除く文字数</div>
-        <div id="trimmedCharCount" class="counter-value">0</div>
-      </div>
-
-      <div class="counter-stat">
-        <div class="counter-label">行数</div>
-        <div id="lineCount" class="counter-value">0</div>
-      </div>
-
-      <div class="counter-stat">
-        <div class="counter-label">UTF-8バイト数</div>
-        <div id="byteCount" class="counter-value">0</div>
-      </div>
+  <div class="counter-stats">
+    <div class="counter-stat">
+      <div class="counter-label">文字数</div>
+      <div id="charCount" class="counter-value">0</div>
     </div>
 
-    <div class="counter-actions">
-      <button id="copyButton" class="counter-btn" type="button">入力内容をコピー</button>
-      <button id="clearButton" class="counter-btn counter-btn-secondary" type="button">消す</button>
+    <div class="counter-stat">
+      <div class="counter-label">行数</div>
+      <div id="lineCount" class="counter-value">0</div>
     </div>
+
+    <div class="counter-stat">
+      <div class="counter-label">UTF-8バイト数</div>
+      <div id="byteCount" class="counter-value">0</div>
+    </div>
+  </div>
+
+  <div class="counter-actions">
+    <button id="copyButton" class="counter-btn" type="button">入力内容をコピー</button>
+    <button id="clearButton" class="counter-btn counter-btn-secondary" type="button">消す</button>
   </div>
 </div>
 
@@ -178,7 +151,6 @@ permalink: /demos/moji-counter/
 document.addEventListener('DOMContentLoaded', function () {
   const textInput = document.getElementById('textInput');
   const charCount = document.getElementById('charCount');
-  const trimmedCharCount = document.getElementById('trimmedCharCount');
   const lineCount = document.getElementById('lineCount');
   const byteCount = document.getElementById('byteCount');
   const clearButton = document.getElementById('clearButton');
@@ -186,8 +158,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateCounts() {
     const text = textInput.value;
-    charCount.textContent = text.length.toLocaleString('ja-JP');
-    trimmedCharCount.textContent = text.replace(/[\s\u3000]/g, '').length.toLocaleString('ja-JP');
+    const countedText = text.replace(/[\s\u3000]/g, '');
+    charCount.textContent = countedText.length.toLocaleString('ja-JP');
     lineCount.textContent = (text.length === 0 ? 0 : text.split(/\r\n|\r|\n/).length).toLocaleString('ja-JP');
     byteCount.textContent = new TextEncoder().encode(text).length.toLocaleString('ja-JP');
   }
